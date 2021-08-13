@@ -125,14 +125,19 @@ Write a function that creates an object with name, rating, feedback, add the new
   3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
   4. should return the resulting array
 */
-console.log("//````````````````````````END OF TASK 5");
+console.log("//````````````````````````THIS IS TASK 5");
 //pass array, name , rating, feedback as parameters
-function addReview(/*Your Code Here */){
+function addReview(array, name, rating, feedback){
   /*Your Code Here */
+  
   // push the object to the end of the array and return the resuting array
+  array.push({name, rating, feedback});
+  return array;
 }
 
+console.log(addReview(reviews, 'ZXeno', 2, 'Failed To Serve My Enemies Head on a Silver Platter. Delicios Ice Crea,'));
 
+console.log("//````````````````````````END OF TASK 5");
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
@@ -143,14 +148,23 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
+console.log("//````````````````````````THIS IS TASK 6");
 // array index
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(array, indexNumber) {
   /*Your code here*/
-  // return the string
+  const reviewer = array[indexNumber];
+  const name = reviewer.name;
+  const rating = reviewer.rating;
+  const feedback = reviewer.feedback;
+  // return the string\
+  let string =`${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`
+  
+  return string; 
 }
 
+console.log(getReviewByIndex(reviews,3));
 
-  
+console.log("//````````````````````````END OF TASK 6");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
@@ -163,13 +177,16 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
+console.log("//````````````````````````THIS IS TASK 7");
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+
+function getLastReview(array) {
+  const reviewer = array[array.length-1];
+  return `${reviewer.name} gave the restaurant a ${reviewer.rating} star review, and their feedback was: ${reviewer.feedback}`;
 } 
 
 
-
+console.log("//````````````````````````END OF TASK 7");
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** 💪💪💪💪💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪💪💪💪💪 
